@@ -1,0 +1,32 @@
+
+# projeto
+sufo git clone https://gitlab.com/parlab/smr-gemmini.git
+
+# pré requisitos
+sudo apt instal docker-compose
+sudo docker login registry.gitlab.com
+
+
+cd dev/
+
+# baixar o docker
+sudo docker-compose up -d
+
+
+# iniciar docker
+sudo docker-compose exec dev bash
+
+# compilar experimentos
+
+
+
+./execution_times.sh 
+./validate.sh 
+./rv-validate.sh 
+
+
+
+# Copiar e simular
+sudo docker cp smr-gemmini:root/smr-gemmini/bin/validate/ teste_small
+
+sudo docker cp smr-gemmini:root/smr-gemmini/bin/validate/gemmini teste_mini/gemmini
